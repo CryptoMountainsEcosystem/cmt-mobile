@@ -1,0 +1,72 @@
+<ion-header no-shadow no-border>
+
+  <ion-navbar>
+    <ion-title>{{ 'SETTINGS_PAGE.SETTINGS' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content *ngIf="availableOptions && currentSettings">
+
+  <ion-list>
+
+    <ion-item-group>
+      <ion-item>
+        <ion-icon name="ios-globe-outline" color="primary" item-start></ion-icon>
+        <ion-label>{{ 'SETTINGS_PAGE.LANGUAGE' | translate }}</ion-label>
+        <ion-select [(ngModel)]="currentSettings.language" (ngModelChange)="onUpdate()" cancelText="{{ 'CANCEL' | translate }}">
+          <ion-option *ngFor="let item of objectKeys(availableOptions?.languages)" [value]="item">
+            {{ availableOptions?.languages[item] }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-cash-outline" color="primary" item-start></ion-icon>
+        <ion-label>{{ 'SETTINGS_PAGE.CURRENCY' | translate }}</ion-label>
+        <ion-select [(ngModel)]="currentSettings.currency" (ngModelChange)="onUpdate()" cancelText="{{ 'CANCEL' | translate }}">
+          <ion-option *ngFor="let item of objectKeys(availableOptions?.currencies)" [value]="item">
+            {{ item | uppercase }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="primary-background"></ion-item-divider>
+      <button detail-push ion-item (click)="openChangePinPage()">
+        <ion-icon name="ios-lock-outline" color="primary" item-start></ion-icon>
+        {{ 'SETTINGS_PAGE.CHANGE_PIN' | translate }}
+      </button>
+    </ion-item-group>
+
+    <ion-item-group [hidden]="true">
+      <ion-item-divider color="primary-background"></ion-item-divider>
+      <ion-item ion-item>
+        <ion-icon name="ios-moon-outline" color="primary" item-start></ion-icon>
+        <ion-label>{{ 'SETTINGS_PAGE.DARK_MODE' | translate }}</ion-label>
+        <ion-toggle disabled checked="false"></ion-toggle>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="primary-background"></ion-item-divider>
+      <button detail-push ion-item (click)="confirmClearData()">
+        <ion-icon name="ios-trash-outline" color="primary" item-start></ion-icon>
+        {{ 'SETTINGS_PAGE.CLEAR_DATA' | translate }}
+      </button>
+      <button detail-push ion-item (click)="openPrivacyPolicy()">
+        <ion-icon name="ios-document-outline" color="primary" item-start></ion-icon>
+        {{ 'SETTINGS_PAGE.PRIVACY_POLICY' | translate }}
+      </button>
+      <ion-item detail-none>
+        <ion-icon name="ios-information-circle-outline" color="primary" item-start></ion-icon>
+        {{ 'SETTINGS_PAGE.VERSION' | translate }}
+        <div item-right><p>{{ appVersion }}</p></div>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+</ion-content>
+
+<pin-code [wallet]="currentWallet" (onSuccess)="onEnterPinCode($event)" #pinCode></pin-code>
