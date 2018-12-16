@@ -1,13 +1,13 @@
-![KAPU Mobile](https://i.imgur.com/CplRVkE.jpg)
 
-# Kapu Mobile
+
+# CMT Mobile
 > A Wallet for Everyone
 
-KAPU’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+CMT’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 
-- [Google Play](https://play.google.com/store/apps/details?id=io.kapu.wallet.mobile)
+- [Google Play](https://play.google.com/store/apps/details?id=io.CMT.wallet.mobile)
 
 ## Features
 
@@ -16,9 +16,9 @@ KAPU’s mobile wallet is a hybrid application (using the same codebase for Andr
 - Encrypt access to your profile with a custom 6 digit PIN (AES256+PBKDF2).
 - Most transaction types are available: send, receive, vote, unvote, register a delegate.
 - Connects to both mainnet and devnet.
-- Option for additional profiles (separate profiles for different KAPU addresses or networks).
+- Option for additional profiles (separate profiles for different CMT addresses or networks).
 - Option to add contacts and easily transact with them.
-- Total balance of your combined KAPU addresses.
+- Total balance of your combined CMT addresses.
 - Wallet backup - input your selected PIN to decrypt your wallet and gain view of your private data.
 - Change PIN - if you want to change your encryption/decryption PIN you can easily do so..
 - Clear Data — you can clear all your data from the phone.
@@ -74,17 +74,17 @@ $ npm run test:e2e
 ## Contributing
 
 - If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls), helping us catch and fix them.
-- Engage with other users and developers on [KAPU Slack](https://slack.kapu.one/).
-- Join to our [gitter](https://gitter.im/kapu-developers/Lobby).
+- Engage with other users and developers on [CMT Slack](https://slack.CMT.one/).
+- Join to our [gitter](https://gitter.im/CMT-developers/Lobby).
 - [Contribute bounties](./CONTRIBUTING.md).
 - [Help translate](./TRANSLATING.md).
 
 ## Authors
 - Lúcio Rubens <lucio@ark.io>
 - Alex Barnsley <alex@ark.io>
-- Nicola Boldrin <kapu.research@gmail.com>
+- Nicola Boldrin <CMT.research@gmail.com>
 - Bledar Gogaj <gobled@gmail.com>
 
 ## License
 
-Kapu Mobile is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+CMT Mobile is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
