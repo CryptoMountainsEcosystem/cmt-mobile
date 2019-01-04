@@ -5,10 +5,6 @@
 
 CMT’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
-## Download
-
-- [Google Play](https://play.google.com/store/apps/details?id=io.CMT.wallet.mobile)
-
 ## Features
 
 - Import your existing passphrase (import by QR Scanner or write/paste your passphrase).
@@ -74,16 +70,11 @@ $ npm run test:e2e
 ## Contributing
 
 - If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls), helping us catch and fix them.
-- Engage with other users and developers on [CMT Slack](https://slack.CMT.one/).
-- Join to our [gitter](https://gitter.im/CMT-developers/Lobby).
 - [Contribute bounties](./CONTRIBUTING.md).
 - [Help translate](./TRANSLATING.md).
 
 ## Authors
-- Lúcio Rubens <lucio@ark.io>
-- Alex Barnsley <alex@ark.io>
-- Nicola Boldrin <CMT.research@gmail.com>
-- Bledar Gogaj <gobled@gmail.com>
+- Lorenzo Caruso <lorenzo.caruso@outlook.com>
 
 ## License
 
